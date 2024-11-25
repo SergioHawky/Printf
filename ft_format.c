@@ -69,7 +69,10 @@ int ft_print_hex(unsigned int num, int uppercase)
     int count;
 
     count = 0;
-    base = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+    if (uppercase == 1)
+        base = "0123456789ABCDEF";
+    else
+        base = "0123456789abcdef";
     if (num > 15)
         count += ft_print_hex(num / 16, uppercase);
     digit = base[num % 16];
