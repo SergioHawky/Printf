@@ -3,7 +3,7 @@
 int print_format(char specifier, va_list ap)
 {
     if (specifier == 'c')
-        return ft_print_char(va_arg(ap, int)); // char promovido para int
+        return ft_print_char(va_arg(ap, int));
     else if (specifier == 's')
         return ft_print_str(va_arg(ap, char *));
     else if (specifier == 'p')
@@ -45,10 +45,10 @@ int main()
     int count;
     int mycount;
 
-    count = printf("Ola meu nome é %s, com %c tenho %d anos, agora %%em hexadecimal %x \n", "sergio", 's', 20, 20);
+    count = printf("%pOla meu nome é %s, com %c tenho %d anos, agora %%em hexadecimal %x \n",, "", 'r', 20, 20);
     printf("A string tem %d characters\n", count);
 
-    mycount = ft_printf("Ola meu nome é %s, com %c tenho %d anos, agora %%em hexadecimal %x \n", "sergio", 's', 20, 20);
+    mycount = ft_printf("%pOla meu nome é %s, com %c tenho %d anos, agora %%em hexadecimal %x \n",, "", 'r', 20, 20);
     ft_printf("A string tem %d characters\n", mycount);
 
     return 0;

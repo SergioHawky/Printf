@@ -41,6 +41,8 @@ int ft_print_nbr(int n)
 
 int ft_print_pt(void *ptr)
 {
+    if (ptr == NULL)
+        return write(1, "(nil)", 5);
     unsigned long long address = (unsigned long long)ptr;
     int len = 0;
 
